@@ -2,6 +2,7 @@ function! myspacevim#before() abort
     " vim-clap
     call SpaceVim#custom#SPC('nore', ['b', 'b'], 'Clap buffers', 'List buffers', 1)
     call SpaceVim#custom#SPC('nore', ['f', 'e'], 'Clap filer', 'explore projects', 1)
+    call SpaceVim#custom#SPC('nore', ['f', 'r'], 'Clap history', 'history files', 1)
     call SpaceVim#custom#SPC('nore', ['f', 'f'], 'Clap files ++finder=rg --no-ignore --hidden --files', 'Find file', 1)
     call SpaceVim#custom#SPC('nore', ['f', 'g'], 'Clap grep', 'Find grep', 1)
     call SpaceVim#custom#SPC('nore', ['f', 'G'], 'Clap grep ++query=<cword>', 'Find grep word', 1)
