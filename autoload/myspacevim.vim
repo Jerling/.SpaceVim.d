@@ -31,6 +31,11 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPC('nore', ['j', 'a'], 'AnyJump', 'Any jump', 1)
     call SpaceVim#custom#SPC('nore', ['j', 'A'], 'AnyJumpBack', 'Any jump back', 1)
     call SpaceVim#custom#SPC('nore', ['j', 'r'], 'AnyJumpLastResults', 'Any jump last results', 1)
+    " vimagit
+    call SpaceVim#custom#SPCGroupName(['g'], '+Git')
+    call SpaceVim#custom#SPC('nore', ['g', 'g'], 'Magit', 'Vimagit', 1)
+    " coc
+    call SpaceVim#custom#SPC('nore', ['c', 'm'], 'CocCommand', 'Coc command', 1)
 endfunction
 
 function! myspacevim#after() abort
