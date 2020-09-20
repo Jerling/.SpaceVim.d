@@ -1,17 +1,4 @@
 function! myspacevim#before() abort
-    " Register ccls C++ lanuage server.
-    if executable('ccls')
-       au User lsp_setup call lsp#register_server({
-          \ 'name': 'ccls',
-          \ 'cmd': {server_info->['ccls']},
-          \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
-          \ 'initialization_options': {
-          \     'cache': {'directory': '/tmp/ccls/cache' },
-          \     'highlight': { 'lsRanges' : v:true },
-          \ },
-          \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
-          \ })
-    endif
     " vim-clap
     call SpaceVim#custom#SPC('nore', ['b', 'b'], 'Clap buffers', 'List buffers', 1)
     call SpaceVim#custom#SPC('nore', ['f', 'e'], 'Clap filer', 'explore projects', 1)
