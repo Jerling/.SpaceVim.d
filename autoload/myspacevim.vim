@@ -27,4 +27,5 @@ function! myspacevim#before() abort
 endfunction
 
 function! myspacevim#after() abort
+  set updatetime=100
 endfunction
