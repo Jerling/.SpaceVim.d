@@ -28,4 +28,5 @@ endfunction
 
 function! myspacevim#after() abort
   set updatetime=100
+  set scrolloff=10
 endfunction
