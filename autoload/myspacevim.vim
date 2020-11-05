@@ -29,4 +29,6 @@ endfunction
 function! myspacevim#after() abort
   set updatetime=100
   set scrolloff=10
+  set et!
+	execute "VimFiler | doautocmd WinEnter"
 endfunction
