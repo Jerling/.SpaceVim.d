@@ -26,7 +26,7 @@ function! myspacevim#before() abort
 	call SpaceVim#custom#SPC('nore', ['g', 'g'], 'Magit', 'Vimagit', 1)
 	" coc
 	call SpaceVim#custom#SPC('nore', ['c', 'm'], 'CocCommand', 'Coc command', 1)
-	autocmd vimenter * NERDTreeClose
+	nnoremap Y <C-V>$y
 endfunction
 
 function! myspacevim#after() abort
