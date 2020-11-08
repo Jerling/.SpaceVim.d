@@ -75,17 +75,17 @@ default_height = 30
   gtagslabel = "ctags"
 
 [[custom_plugins]]
-   repo = 'liuchengxu/vim-clap'
-   merged = false
+  repo = 'liuchengxu/vim-clap'
+  merged = false
 
 [[custom_plugins]]
-   repo = 'liuchengxu/vista.vim'
-   merged = false
+  repo = 'liuchengxu/vista.vim'
+  merged = false
 
 [[custom_plugins]]
-   repo = 'pechorin/any-jump.vim'
-   merged = false
+	repo = 'pechorin/any-jump.vim'
+	merged = false
 
 [[custom_plugins]]
-   repo = 'jreybert/vimagit'
-   merged = false
+  repo = 'jreybert/vimagit'
+  merged = false
