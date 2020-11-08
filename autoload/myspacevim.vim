@@ -1,4 +1,6 @@
 function! myspacevim#before() abort
+	autocmd vimenter * NERDTreeClose
+
 	" vim-clap
 	call SpaceVim#custom#SPC('nore', ['b', 'b'], 'Clap buffers', 'List buffers', 1)
 	call SpaceVim#custom#SPC('nore', ['f', 'e'], 'Clap filer', 'explore projects', 1)
