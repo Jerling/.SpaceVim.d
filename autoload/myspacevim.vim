@@ -28,7 +28,9 @@ function! myspacevim#before() abort
 	call SpaceVim#custom#SPC('nore', ['g', 'C'], 'Git commit -s', 'Commit with signed', 1)
 	" coc
 	call SpaceVim#custom#SPC('nore', ['c', 'm'], 'CocCommand', 'Coc command', 1)
-	nnoremap Y <C-V>$y
+	" gerneral
+	nnoremap Y <C-v>$y
+	nnoremap <C-i> <C-i> 
 endfunction
 
 function! myspacevim#after() abort
