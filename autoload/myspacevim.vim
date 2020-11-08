@@ -1,4 +1,5 @@
 function! myspacevim#before() abort
+	source $VIMRUNTIME/ftplugin/man.vim
 	autocmd vimenter * NERDTreeClose
 
 	" vim-clap
@@ -28,6 +29,11 @@ function! myspacevim#before() abort
 	call SpaceVim#custom#SPC('nore', ['g', 'C'], 'Git commit -s', 'Commit with signed', 1)
 	" coc
 	call SpaceVim#custom#SPC('nore', ['c', 'm'], 'CocCommand', 'Coc command', 1)
+	" man
+	nnoremap <silent><space>hM :Man 2 <C-R>=expand("<cword>")<CR><CR>
+	nnoremap <silent><space>hm :vert Man 2 <C-R>=expand("<cword>")<CR><CR>
+	vnoremap <silent><space>hM :Man 2 <C-R>=expand("<cword>")<CR><CR>
+	vnoremap <silent><space>hm :vert Man 2 <C-R>=expand("<cword>")<CR><CR>
 	" gerneral
 	nnoremap Y <C-v>$y
 	nnoremap <C-i> <C-i> 
