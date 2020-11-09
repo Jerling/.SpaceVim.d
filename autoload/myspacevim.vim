@@ -36,7 +36,6 @@ function! myspacevim#before() abort
 	vnoremap <silent><space>hm :vert Man 2 <C-R>=expand("<cword>")<CR><CR>
 	" gerneral
 	nnoremap Y <C-v>$y
-	nnoremap <C-i> <C-i> 
 endfunction
 
 function! myspacevim#after() abort
