@@ -57,14 +57,7 @@ default_height = 30
     cpp = ["clangd"]
 
 [[layers]]
-  name = "format"
-
-[[layers]]
   name = "git"
-
-[[layers]]
-  name = "tmux"
-  tmux_navigator_modifier = "alt"
 
 [[layers]]
   name = "checkers"
@@ -80,12 +73,4 @@ default_height = 30
 
 [[custom_plugins]]
   repo = 'liuchengxu/vista.vim'
-  merged = false
-
-[[custom_plugins]]
-	repo = 'pechorin/any-jump.vim'
-	merged = false
-
-[[custom_plugins]]
-  repo = 'jreybert/vimagit'
   merged = false
