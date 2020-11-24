@@ -43,4 +43,5 @@ function! myspacevim#after() abort
   set scrolloff=10
   set et!
 	set mouse=
+	let g:gtags_auto_update = 0
 endfunction
