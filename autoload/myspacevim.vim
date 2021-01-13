@@ -1,7 +1,4 @@
 function! myspacevim#before() abort
-	source $VIMRUNTIME/ftplugin/man.vim
-	autocmd vimenter * NERDTreeClose
-
 	" vim-clap
 	call SpaceVim#custom#SPC('nore', ['b', 'b'], 'Clap buffers', 'List buffers', 1)
 	call SpaceVim#custom#SPC('nore', ['f', 'e'], 'Clap filer', 'explore projects', 1)
@@ -16,32 +13,16 @@ function! myspacevim#before() abort
 	call SpaceVim#custom#SPC('nore', ['f', 'y'], 'Clap yanks', 'Find yanks', 1)
 	call SpaceVim#custom#SPC('nore', ['m', 'm'], 'Clap marks', 'Find marks', 1)
 	call SpaceVim#custom#SPC('nore', ['c', 'c'], 'Clap command', 'Clap command', 1)
-	" vist
-	call SpaceVim#custom#SPC('nore', ['t', 'v'], 'Vista!!', 'Toggle vista', 1)
-	" any-jump
-	call SpaceVim#custom#SPC('nore', ['j', 'a'], 'AnyJump', 'Any jump', 1)
-	call SpaceVim#custom#SPC('nore', ['j', 'A'], 'AnyJumpBack', 'Any jump back', 1)
-	call SpaceVim#custom#SPC('nore', ['j', 'r'], 'AnyJumpLastResults', 'Any jump last results', 1)
-	" vimagit
-	call SpaceVim#custom#SPCGroupName(['g'], '+Git')
-	call SpaceVim#custom#SPC('nore', ['g', 'g'], 'Magit', 'Vimagit', 1)
-	call SpaceVim#custom#SPC('nore', ['g', 'y'], 'Git mr --yes', 'Git merge', 1)
-	call SpaceVim#custom#SPC('nore', ['g', 'C'], 'Git commit -s', 'Commit with signed', 1)
-	" coc
-	call SpaceVim#custom#SPC('nore', ['c', 'm'], 'CocCommand', 'Coc command', 1)
-	" man
-	nnoremap <silent><space>hM :Man 2 <C-R>=expand("<cword>")<CR><CR>
-	nnoremap <silent><space>hm :vert Man 2 <C-R>=expand("<cword>")<CR><CR>
-	vnoremap <silent><space>hM :Man 2 <C-R>=expand("<cword>")<CR><CR>
-	vnoremap <silent><space>hm :vert Man 2 <C-R>=expand("<cword>")<CR><CR>
 	" gerneral
 	nnoremap Y <C-v>$y
+	imap {<CR> {<CR>}<ESC>O
 endfunction
 
 function! myspacevim#after() abort
-  set updatetime=100
-  set scrolloff=10
-  set et!
+	set updatetime=100
+	set scrolloff=10
+	set et!
 	set mouse=
 	let g:gtags_auto_update = 0
+	autocmd FileType make set noexpandtab
 endfunction

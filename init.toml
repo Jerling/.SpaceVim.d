@@ -21,12 +21,14 @@
     statusline_separator = "arrow"
     statusline_inactive_separator = "arrow"
     buffer_index_type = 4
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = false
-		filemanager = "nerdtree"
+    default_indent = 4
+    relativenumber = false
+    enable_vimfiler_welcome = false
     filetree_direction = "left"
-    autocomplete_method = "coc"
-
+    enable_neomake = false
+    enable_cursorcolumn = true
+    checkinstall = false
+    
     bootstrap_before = "myspacevim#before"
     bootstrap_after = "myspacevim#after"
 
@@ -37,24 +39,10 @@ auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
-name = 'shell' default_position = 'bottom'
-default_height = 30
-
-[[layers]]
   name = "colorscheme"
 
 [[layers]]
   name = "lang#c"
-
-[[layers]]
-  name = "lsp"
-  filetypes = [
-    "c",
-    "cpp"
-  ]
-  [layers.override_cmd]
-    c = ["clangd"]
-    cpp = ["clangd"]
 
 [[layers]]
   name = "git"
@@ -69,8 +57,4 @@ default_height = 30
 
 [[custom_plugins]]
   repo = 'liuchengxu/vim-clap'
-  merged = false
-
-[[custom_plugins]]
-  repo = 'liuchengxu/vista.vim'
   merged = false
