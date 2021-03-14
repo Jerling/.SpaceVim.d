@@ -13,16 +13,38 @@ function! myspacevim#before() abort
 	call SpaceVim#custom#SPC('nore', ['f', 'y'], 'Clap yanks', 'Find yanks', 1)
 	call SpaceVim#custom#SPC('nore', ['m', 'm'], 'Clap marks', 'Find marks', 1)
 	call SpaceVim#custom#SPC('nore', ['c', 'c'], 'Clap command', 'Clap command', 1)
+
+	" Coc
+	call SpaceVim#custom#SPCGroupName(['g'], '+Coc goto')
+	call SpaceVim#custom#SPC('nore', ['g', 'd'], "call CocAction('jumpDefinition')", 'Coc goto definition', 1)
+	call SpaceVim#custom#SPC('nore', ['g', 'y'], "call CocAction('jumpDefinition')", 'Coc goto type definition', 1)
+	call SpaceVim#custom#SPC('nore', ['g', 'i'], "call CocAction('jumpDefinition')", 'Coc goto implement', 1)
+	call SpaceVim#custom#SPC('nore', ['g', 'r'], "call CocAction('jumpDefinition')", 'Coc goto reference', 1)
+
 	" gerneral
 	nnoremap Y <C-v>$y
 	imap {<CR> {<CR>}<ESC>O
 endfunction
 
 function! myspacevim#after() abort
-	set updatetime=100
+	" set updatetime=100
 	set scrolloff=10
 	set et!
 	set mouse=
 	let g:gtags_auto_update = 0
 	autocmd FileType make set noexpandtab
+
+	let s:coc_extensions = [
+				\ 'coc-marketplace'
+				\ 'coc-dictionary',
+				\ 'coc-json',
+				\ 'coc-ultisnips',
+				\ 'coc-tag',
+				\ 'coc-git',
+				\ 'coc-spell-checker',
+				\ 'coc-yank',
+				\]
+	for extension in s:coc_extensions
+		call coc#add_extension(extension)
+	endfor
 endfunction
