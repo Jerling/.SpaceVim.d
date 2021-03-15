@@ -28,9 +28,9 @@
     enable_neomake = false
     enable_cursorcolumn = true
     checkinstall = false
-	disabled_plugins = ["tabular", "CompleteParameter.vim", "vim-matchup", "open-browser.vim", "vim-table-mode"]
-	autocomplete_method = "coc"
-	snippet_engine = "ultisnips"
+    disabled_plugins = ["tabular", "CompleteParameter.vim", "vim-matchup", "open-browser.vim", "vim-table-mode"]
+    autocomplete_method = "coc"
+    # snippet_engine = "ultisnips"
     
     bootstrap_before = "myspacevim#before"
     bootstrap_after = "myspacevim#after"

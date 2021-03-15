@@ -33,12 +33,12 @@ function! myspacevim#after() abort
 	set mouse=
 	let g:gtags_auto_update = 0
 	autocmd FileType make set noexpandtab
+	set wrap
 
 	let s:coc_extensions = [
-				\ 'coc-marketplace'
+				\ 'coc-marketplace',
 				\ 'coc-dictionary',
 				\ 'coc-json',
-				\ 'coc-ultisnips',
 				\ 'coc-tag',
 				\ 'coc-git',
 				\ 'coc-spell-checker',
