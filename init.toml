@@ -28,7 +28,7 @@
     enable_neomake = false
     enable_cursorcolumn = true
     checkinstall = false
-    disabled_plugins = ["tabular", "CompleteParameter.vim", "vim-matchup", "open-browser.vim", "vim-table-mode"]
+    disabled_plugins = ["tabular", "vim-matchup", "open-browser.vim", "vim-table-mode"]
     autocomplete_method = "coc"
     # snippet_engine = "ultisnips"
     
@@ -38,7 +38,7 @@
 # Enable autocomplete layer
 [[layers]]
   name = 'autocomplete'
-  auto_completion_return_key_behavior = "complete"
+  # auto_completion_return_key_behavior = "complete"
   auto_completion_tab_key_behavior = "smart"
 
 [[layers]]

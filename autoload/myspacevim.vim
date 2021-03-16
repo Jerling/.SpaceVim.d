@@ -21,19 +21,23 @@ function! myspacevim#before() abort
 	call SpaceVim#custom#SPC('nore', ['g', 'i'], "call CocAction('jumpDefinition')", 'Coc goto implement', 1)
 	call SpaceVim#custom#SPC('nore', ['g', 'r'], "call CocAction('jumpDefinition')", 'Coc goto reference', 1)
 
+	" Terminal
+	call SpaceVim#custom#SPC('nore', ['t', 'v'], "vert terminal", 'Open terimal vertical', 1)
+	call SpaceVim#custom#SPC('nore', ['t', 't'], "terminal", 'Open terimal', 1)
+
 	" gerneral
 	nnoremap Y <C-v>$y
 	imap {<CR> {<CR>}<ESC>O
+	tmap JK <C-\><C-N>
 endfunction
 
 function! myspacevim#after() abort
 	" set updatetime=100
-	set scrolloff=10
 	set et!
-	set mouse=
-	let g:gtags_auto_update = 0
-	autocmd FileType make set noexpandtab
 	set wrap
+	set scrolloff=10
+	let g:gtags_auto_update = 0
+	let g:clap_preview_direction = 'UD'
 
 	let s:coc_extensions = [
 				\ 'coc-marketplace',
@@ -47,4 +51,6 @@ function! myspacevim#after() abort
 	for extension in s:coc_extensions
 		call coc#add_extension(extension)
 	endfor
+	autocmd FileType make set noexpandtab
+	autocmd TerminalOpen * set nonu
 endfunction
