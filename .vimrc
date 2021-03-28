@@ -12,6 +12,8 @@ set incsearch
 set hlsearch
 set smartcase
 set cscopequickfix=c-,d-,e-,g-,i-,s-,t-
+autocmd FileType make set noexpandtab
+autocmd TerminalOpen * set nonu
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 nmap <C-t> :colder<CR>:cc<CR>
