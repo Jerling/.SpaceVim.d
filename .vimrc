@@ -34,7 +34,8 @@ inoremap { {<CR>}<ESC>O
 if filereadable("cscope.out")
 	cs add cscope.out
 endif
-nmap <C-k>a :cs add cscope.out<CR>
+nmap <C-k>A :cs add cscope.out<CR>
+nmap <C-k>a :cs find a <C-R>=expand("<cword>")<CR><CR>
 nmap <C-k>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <C-k>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <C-k>c :cs find c <C-R>=expand("<cword>")<CR><CR>
