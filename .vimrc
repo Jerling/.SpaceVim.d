@@ -17,8 +17,8 @@ autocmd TerminalOpen * set nonu
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 nmap <C-t> :colder<CR>:cc<CR>
-nmap <C-n> :cnext<CR>
-nmap <C-p> :cprev<CR>
+nmap <C-j> :cnext<CR>
+nmap <C-k> :cprev<CR>
 
 " insert mode
 imap jk <Esc>
@@ -34,17 +34,26 @@ inoremap { {<CR>}<ESC>O
 if filereadable("cscope.out")
 	cs add cscope.out
 endif
-nmap <C-k>A :cs add cscope.out<CR>
-nmap <C-k>a :cs find a <C-R>=expand("<cword>")<CR><CR>
-nmap <C-k>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-k>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-k>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-k>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-k>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-k>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-k>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-k>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-nmap <C-k>F :cs find f 
+nmap <C-l>o :cs add cscope.out<CR>
+nmap <C-l>a :cs find a <C-R>=expand("<cword>")<CR><CR>
+nmap <C-l>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-l>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-l>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-l>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-l>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-l>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-l>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-l>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-l>A :cs find a 
+nmap <C-l>S :cs find s 
+nmap <C-l>G :cs find g 
+nmap <C-l>C :cs find c 
+nmap <C-l>T :cs find t 
+nmap <C-l>E :cs find e 
+nmap <C-l>F :cs find f 
+nmap <C-l>I :cs find i 
+nmap <C-l>D :cs find d 
+nmap <C-p> :cs find f 
 
 "
 nmap <C-l>h :browse oldfiles<CR>
