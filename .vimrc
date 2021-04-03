@@ -3,10 +3,16 @@ set nu
 set et!
 set wrap
 set ts=4
+syntax on
+set shiftwidth=4
+set softtabstop=4
 set laststatus=2
 set scrolloff=10
 set cindent
+set nobackup
+set autoindent
 set nocompatible
+set noexpandtab
 " set cursorline
 set incsearch
 set hlsearch
@@ -23,12 +29,6 @@ nmap <C-k> :cprev<CR>
 " insert mode
 imap jk <Esc>
 tmap JK <C-\><C-N>
-imap {<CR> {<CR>}<ESC>O
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {<CR>}<ESC>O
 
 " cscope
 if filereadable("cscope.out")
@@ -55,8 +55,9 @@ nmap <C-l>I :cs find i
 nmap <C-l>D :cs find d 
 nmap <C-p> :cs find f 
 
-"
 nmap <C-l>h :browse oldfiles<CR>
 nmap <C-l>t :vert term<CR>
 nmap <C-l>T :term<CR>
 nmap <C-l>b :ls<CR>
+
+nmap <C-l>n :nohl<CR>
