@@ -19,7 +19,6 @@ set hlsearch
 set smartcase
 set cscopequickfix=c-,d-,e-,g-,i-,s-,t-
 autocmd FileType make set noexpandtab
-autocmd TerminalOpen * set nonu
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 nmap <C-t> :colder<CR>:cc<CR>
@@ -28,7 +27,10 @@ nmap <C-k> :cprev<CR>
 
 " insert mode
 imap jk <Esc>
-tmap JK <C-\><C-N>
+if has('terminal')
+	tmap JK <C-\><C-N>
+	autocmd TerminalOpen * set nonu
+endif
 
 " cscope
 if filereadable("cscope.out")
